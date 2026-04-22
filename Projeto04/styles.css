@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset básico: remove margens e paddings padrão e define box-sizing */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Container principal da página (fundo) */
+.main-box{
+  position: relative; /* permite posicionar elementos dentro dele */
+  background: url('side.jpeg') right no-repeat; /* imagem de fundo alinhada à direita */
+  background-size: cover; /* faz a imagem cobrir toda a tela */
+  height: 100vh; /* altura total da tela */
+  width: 100%;
+}
+
+/* Menu lateral (sidebar) */
+.main-box .sidebar-menu{
+  position: fixed; /* fica fixo na tela */
+  height: 100vh;
+  width: 280px;
+  left: -280px; /* começa escondido fora da tela */
+  background: rgba(255, 255, 255, 0.1); /* fundo transparente */
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
+/* Área da logo no topo */
+.sidebar-menu .logo{
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
+/* Texto da logo */
+.sidebar-menu .logo a{
+  color: #fff;
+  font-size: 25px;
+  font-weight: 500;
+  position: absolute;
+  left: 50px;
+  line-height: 60px; /* centraliza verticalmente */
+  text-decoration: none;
+}
+
+/* Lista do menu */
+.sidebar-menu .menu{
+  position: absolute;
+  top: 80px; /* distância do topo */
+  width: 100%;
+}
+
+/* Cada item do menu */
+.sidebar-menu .menu li{
+  margin-top: 6px;
+  padding: 14px 20px; 
+  transition: all 0.3s linear; /* animação suave */
+}
+
+/* Ícones do menu */
+.sidebar-menu .menu i{
+  color: #fff;
+  font-size: 20px;
+  padding-right: 8px;
+}
+
+/* Links do menu */
+.sidebar-menu .menu a{
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* Efeito ao passar o mouse */
+.sidebar-menu .menu li:hover{
+  border-left: 1px solid #fff;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+/* Container dos ícones de redes sociais */
+.sidebar-menu .social-media{
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%); /* centraliza horizontalmente */
+  cursor: pointer;
+}
+
+/* Ícones das redes sociais */
+.social-media i{
+  padding: 0 5px;
+  color: #fff;
+  opacity: 0.6; /* meio transparente */
+  font-size: 20px;
+  transition: all 0.2s linear;
+}
+
+/* Efeito ao passar o mouse nos ícones */
+.social-media i:hover{
+  opacity: 1; /* fica totalmente visível */
+}
+
+/* Todos os ícones dentro do main-box */
+.main-box i{
+  color: #fff;
+}
+
+/* Checkbox escondido (controla abrir/fechar menu) */
+#check{
+  display: none;
+}
+
+/* Botão de abrir (ícone de menu) */
+.main-box .btn-one i{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  left: 16px;
+  line-height: 60px;
+  cursor: pointer;
+  opacity: 1;
+  transition: all 0.3s linear;
+}
+
+/* Botão de fechar (X) */
+.sidebar-menu .btn-two i{
+  font-size: 25px;
+  line-height: 60px;
+  position: absolute;
+  left: 240px;
+  cursor: pointer;
+  opacity: 0; /* começa invisível */
+  transition: all 0.3s linear;
+}
+
+/* Efeito hover no botão abrir */
+.btn-one i:hover {
+  font-size: 29px;
+}
+
+/* Esse aqui sobrescreve o de cima */
+.btn-one i:hover {
+  font-size: 24px;
+}
+
+/* Quando o checkbox é marcado → abre o menu */
+#check:checked ~ .sidebar-menu{
+  left: 0px;
+}
+
+/* Quando abre o menu → esconde botão de abrir */
+#check:checked ~ .btn-one i{
+  opacity: 0;
+}
+
+/* Quando abre o menu → mostra botão X (fechar) */
+#check:checked ~ .btn-two i{
+  opacity: 1;
+}

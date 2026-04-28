@@ -1,0 +1,141 @@
+/* Importa a fonte Poppins do Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reseta margens e define padrão para todos os elementos */
+*{
+    margin: 0; /* tira espaço externo */
+    padding: 0; /* tira espaço interno */
+    box-sizing: border-box; /* facilita o controle de tamanho */
+    font-family: "Poppins", sans-serif; /* aplica a fonte */
+}
+
+/* Estiliza a barra de navegação */
+nav{
+    position: fixed; /* fixa no topo da tela */
+    background: #1b1b1b; /* cor de fundo escura */
+    width: 100%; /* ocupa toda a largura */
+    z-index: 12; /* fica por cima de outros elementos */
+}
+
+/* Container do menu */
+nav .menu{
+    max-width: 1250px; /* largura máxima */
+    margin: auto; /* centraliza */
+    display: flex; /* deixa os itens em linha */
+    align-items: center; /* alinha verticalmente */
+    justify-content: space-between; /* separa logo e menu */
+    padding: 0 20px; /* espaço nas laterais */
+}
+
+/* Logo */
+.menu .logo a{
+    text-decoration: none; /* tira sublinhado */
+    color: #fff; /* cor branca */
+    font-size: 35px; /* tamanho grande */
+    font-weight: 600; /* mais grossa */
+}
+
+/* Lista do menu */
+.menu ul{
+    display: inline-flex; /* deixa os itens lado a lado */
+}
+
+/* Cada item da lista */
+.menu ul li{
+    list-style: none; /* remove bolinha da lista */
+    margin-left: 7px; /* espaço entre itens */
+}
+
+/* Links do menu */
+.menu ul li a{
+    text-decoration: none; /* tira sublinhado */
+    color: #fff; /* cor branca */
+    font-size: 18px; /* tamanho do texto */
+    font-weight: 500; /* peso médio */
+    padding: 8px 15px; /* espaço interno */
+    border-radius: 5px; /* borda arredondada */
+    transition: all 0.3s ease; /* animação suave */
+}
+
+/* Efeito quando passa o mouse */
+.menu ul li a:hover{
+    background: #fff; /* fundo branco */
+    color: #000; /* texto preto */
+}
+
+/* Imagem de fundo */
+.img{
+    background: url(image.png) no-repeat; /* imagem sem repetir */
+    height: 100vh; /* altura da tela inteira */
+    width: 100%; /* largura total */
+    background-position: center; /* centraliza imagem */
+    background-size: cover; /* cobre toda a área */
+    position: relative; /* necessário para overlay */
+}
+
+/* Camada escura por cima da imagem */
+.img::before{
+    content: ''; /* necessário para pseudo-elemento */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4); /* escurece a imagem */
+}
+
+/* Conteúdo centralizado */
+.center{
+    position: absolute;
+    top: 52%; /* posição vertical */
+    left: 50%; /* posição horizontal */
+    width: 100%;
+    transform: translate(-50% , -50%); /* centraliza de verdade */
+    padding: 0 20px;
+    text-align: center; /* centraliza texto */
+}
+
+/* Título principal */
+.center .title{
+    color: #fff; /* branco */
+    font-size: 55px; /* grande */
+    font-weight: 600; /* forte */
+}
+
+/* Subtítulo */
+.center .sub_title{
+    color: #fff;
+    font-size: 52px;
+    font-weight: 600;
+}
+
+/* Container dos botões */
+.center .btns{
+    margin-top: 20px; /* espaço acima */
+}
+
+/* Botões */
+.center .btns button{
+    height: 55px; /* altura */
+    width: 170px; /* largura */
+    border-radius: 5px; /* borda arredondada */
+    border: none;
+    margin: 0 10px; /* espaço entre botões */
+    border: 2px solid #fff; /* borda branca */
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0 10px;
+    cursor: pointer; /* mãozinha */
+    outline: none;
+    transition: all 0.3s ease; /* animação */
+}
+
+/* Primeiro botão */
+.center .btns button:first-child{
+    color: #fff; /* texto branco */
+    background: none; /* sem fundo */
+}
+
+/* Efeito hover no primeiro botão */
+.center .btns button:first-child:hover{
+    background: #fff; /* fundo branco */
+    color: #000; /* texto preto */
+}

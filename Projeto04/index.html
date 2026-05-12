@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Importa a fonte Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Importa os ícones (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Arquivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Sidebar Menu</title>
+</head>
+<body>
+
+    <div class="main-box">
+
+        <!-- Checkbox invisível usado para controlar o menu -->
+        <input type="checkbox" id="check">
+
+        <!-- Botão de abrir menu -->
+        <div class="btn-one">
+            <label for="check">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+        </div>
+        
+        <!-- Menu lateral -->
+        <div class="sidebar-menu">
+
+            <!-- Logo -->
+            <div class="logo">
+                <a href="#">CodingLab</a>
+            </div>
+
+            <!-- Botão de fechar -->
+            <div class="btn-two">
+                <label for="check">
+                    <i class="fa-solid fa-x"></i>
+                </label>
+            </div>
+
+            <!-- Lista de navegação -->
+            <ul class="menu">
+                <li><a href="#"><i class="fa-solid fa-qrcode"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fa-solid fa-link"></i> Shortcuts</a></li>
+                <li><a href="#"><i class="fa-solid fa-chart-simple"></i> Overview</a></li>
+                <li><a href="#"><i class="fa-solid fa-calendar"></i> Events</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-info"></i> About</a></li>
+                <li><a href="#"><i class="fa-solid fa-sliders"></i> Services</a></li>
+                <li><a href="#"><i class="fa-solid fa-phone"></i> Contact</a></li>
+                <li><a href="#"><i class="fa-solid fa-comment"></i> Feedback</a></li>
+            </ul>
+
+            <!-- Redes sociais -->
+            <div class="social-media">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

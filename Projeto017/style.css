@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+header{
+    height: 100vh;
+    width: 100%;
+    background: url("img/background.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+header nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav .navbar{
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo{
+    width: 150px;
+    height: 80px;
+}
+
+.navbar .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.navbar .menu{
+    display: flex;
+}
+
+.navbar .menu li{
+    list-style: none;
+    margin: 0 10px;
+}
+
+.navbar .menu li a{
+    text-decoration: none;
+    font-size: 17px;
+    color: #2c3e50;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar .menu li a:hover{
+    color: #000;
+}
+
+.navbar .search-box{
+    position: relative;
+    width: 250px;
+    height: 50px;
+}
+
+.search-box input{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #2c3e50;
+    border-radius: 8px;
+    outline: none;
+    padding: 0 10px 0 45px;
+    font-size: 17px;
+    color: #2c3e50;
+}
+
+.search-box a{
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #2c3e50;
+    font-size: 18px;
+    padding-right: 8px;
+    border-right: 2px solid #2c3e50;
+}
+
+.content{
+    position: absolute;
+    top: 33%;
+    left: 7%;
+}
+
+.content .text{
+    font-size: 27px;
+    color: #2c3e50;
+}
+
+.content .name{
+    font-size: 75px;
+    color: #2c3e50;
+    margin-left: -3px;
+}
+
+.content .job{
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    color: #2c3e50;
+}
+
+.content .typing-text{
+    margin-left: 10px;
+    color: #1de2d1;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #1de2d1;
+    line-height: 1;
+    display: inline-block;
+
+    animation:
+    typing 5s steps(18) infinite,
+    cursor .7s step-end infinite;
+}
+
+@keyframes typing{
+    0%{
+        width: 0ch;
+    }
+
+    50%{
+        width: 18ch;
+    }
+
+    100%{
+        width: 0ch;
+    }
+}
+
+@keyframes cursor{
+    50%{
+        border-color: transparent;
+    }
+}
+
+.content .buttons{
+    margin-top: 20px;
+}
+
+.content .buttons button{
+    padding: 10px 18px;
+    margin-right: 10px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 17px;
+
+    background: linear-gradient(
+        135deg,
+        #2afadf 10%,
+        #c346c2 100%
+    );
+
+    transition: 0.3s;
+}
+
+.content .buttons button:hover{
+    transform: scale(0.97);
+}
+
+header .girl img{
+    position: absolute;
+    right: 80px;
+    bottom: 0;
+    height: 95%;
+}
+
+header .media-icons{
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.media-icons a{
+    margin: 8px 0;
+    font-size: 20px;
+    color: #2c3e50;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.media-icons a:hover{
+    opacity: 1;
+}
